@@ -10,10 +10,11 @@
         <content>
 
             <Panel headerText="{i18n>lbTitlePanel1}"  expandable="true" >
-                <List items="{path: 'model3>/Products', filters: [{path: 'CategoryID', operator: 'EQ', value1: '2'}]  }" >
+                <List items="{path: 'model3>/Products'}" >
                     <StandardListItem infoState="Warning" infoStateInverted="true" info="{path: 'model3>UnitsInStock', formatter: '.formatAlertStock'}" title="{model3>ProductName}" counter="{model3>UnitsInStock}"></StandardListItem>
                 </List>
             </Panel>
+
             <Panel headerText="{i18n>lbTitlePanel2}"  expandable="true" >
                 <ComboBox items="{model4>/data}" selectionChange="onDataComboBoxChange">
                     <core:Item text="{model4>departament}"></core:Item>

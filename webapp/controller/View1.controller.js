@@ -10,7 +10,7 @@ function (Controller, Fragment, JSONModel, MessageToast) {
     return Controller.extend("mentoria.fiori.ka.zkaui5242ads.controller.View1", {
         onInit: function () {
             var oModelJson = new JSONModel({
-                name: 'João',
+                name: 'Adalto',
                 showSecondName: true
             })
             this.getView().setModel(oModelJson, "model1");
@@ -44,18 +44,10 @@ function (Controller, Fragment, JSONModel, MessageToast) {
         },
 
         onDataComboBoxChange: function (oEvent) {
-            //Pegando item selecionado no combobox
+
             var oItem = oEvent.getParameter("selectedItem")
-
-            //Pegando o contexto da vinculação e depois o caminho dele (path)
-            //Preciso colocar o nome do model quando eu dou um nome para ele na vinculação do onInit
             var sPath = oItem.getBindingContext("model4").getPath();
-
-            //Obtendo eferencia da lista
             var oList = this.byId("listEmployees");
-
-            //Vinculando toda a lista ao caminho/contexto relativo ao item do combobox selecionado
-            //Preciso colocar o nome do model quando eu dou um nome para ele na vinculação do onInit
             oList.bindElement({ path: sPath, model: "model4" });
         },
 
