@@ -8,7 +8,7 @@ sap.ui.define(
       return BaseController.extend("mentoria.fiori.ka.zkaui5242ads.controller.App", {
         onInit: function() {
         }
-      });
+      }); 
     }
   );
   
