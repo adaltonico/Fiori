@@ -1,0 +1,8 @@
+<c:FragmentDefinition xmlns="sap.m"
+    xmlns:c="sap.ui.core" >
+
+    <Label text="Nome" />
+    <Input value="{/name}" width="100%" />
+
+
+</c:FragmentDefinition>

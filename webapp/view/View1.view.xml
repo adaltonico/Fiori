@@ -1,0 +1,27 @@
+<mvc:View controllerName="mentoria.fiori.ka.zkaui5242ads.controller.View1" 
+    xmlns:mvc="sap.ui.core.mvc" 
+    xmlns="sap.m"  
+    xmlns:form="sap.ui.layout.form"
+    xmlns:core="sap.ui.core" displayBlock="true">
+    <Page id="page" title="{i18n>title}">
+        <headerContent>
+            <Button text="Cadastrar Dependentes" type="Success" icon="sap-icon://person-placeholder" id="button0" press="onOpenDialog"/>
+        </headerContent>
+        <content>
+            <form:SimpleForm editable="true" layout="ResponsiveGridLayout" id="form0">
+                <form:content>
+                    <core:Title text="Dados do Usuário" id="title0"/>
+                    <core:Fragment fragmentName="mentoria.fiori.ka.zkaui5242ads.view.fragments.InputName" />
+                    
+                    <Label text="Usar Sobrenome"/>
+                    <Switch state="{model1>/showSecondName}" customTextOn="Sim" customTextOff="Não" ></Switch>
+                    <Label text="Sobrenome" visible="{model1>/showSecondName}" id="label10"/>
+                    <Input width="100%" visible="{model1>/showSecondName}" id="input11"/>
+
+                    <Label text="Email" id="label1"/>
+                    <Input width="100%" id="input2"/>
+                </form:content>
+            </form:SimpleForm>
+        </content>
+    </Page>
+</mvc:View>

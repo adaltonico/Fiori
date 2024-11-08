@@ -1,0 +1,26 @@
+# yaml-language-server: $schema=https://sap.github.io/ui5-tooling/schema/ui5.yaml.json
+
+specVersion: "3.1"
+metadata:
+  name: mentoria.fiori.ka.zkaui5242ads
+type: application
+builder:
+  resources:
+    excludes:
+      - /test/**
+      - /localService/**
+  customTasks:
+    - name: deploy-to-abap
+      afterTask: generateCachebusterInfo
+      configuration:
+        target:
+          destination: S4mentoria-ADS
+          url: http://s4d.virtual:443
+          client: '100'
+        app:
+          name: ZKAUI5242ADS
+          description: Primeiro Deploy
+          package: ZTRAIN-19
+          transport: S4DK900239
+        exclude:
+          - /test/
