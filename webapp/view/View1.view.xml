@@ -10,6 +10,9 @@
         <content>
 
             <Panel headerText="{i18n>lbTitlePanel1}"  expandable="true" >
+                <List items="{model3>/Products}">
+                    <StandardListItem title="{model3>ProductName}" counter="{model3>UnitsInStock}"></StandardListItem>
+                </List>
                 <List items="{path: 'model3>/Products'}" >
                     <StandardListItem infoState="Warning" infoStateInverted="true" info="{path: 'model3>UnitsInStock', formatter: '.formatAlertStock'}" title="{model3>ProductName}" counter="{model3>UnitsInStock}"></StandardListItem>
                 </List>
@@ -44,6 +47,15 @@
                         <Input width="100%" id="input2"/>
                     </form:content>
                 </form:SimpleForm>
+            </Panel>
+
+            <Panel headerText="{i18n>lbTitlePanel4}" expandable="true">
+                <core:Fragment fragmentName="mentoria.fiori.ka.zkaui5242ads.view.TableUxCustumer"/>
+            </Panel>
+
+            <Panel headerText="{i18n>lbTitlePanel5}" expandable="true">
+                <Input change="onChangeLine" placeholder="Compania Áerea"/>
+                <Input id="carridName" busyIndicatorDelay="0" />
             </Panel>
         </content>
     </Page>

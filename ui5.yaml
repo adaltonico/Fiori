@@ -15,6 +15,17 @@ server:
             - /resources
             - /test-resources
           url: https://ui5.sap.com
+        backend:
+          - path: /sap
+            url: http://s4d.virtual:443
+            client: '100'
+            destination: S4mentoria-ADS
+            authenticationType: BasicAuthentication
+          - path: /sap
+            url: http://s4d.virtual:443
+            client: '100'
+            destination: S4mentoria-ADS
+            authenticationType: BasicAuthentication
     - name: fiori-tools-appreload
       afterMiddleware: compression
       configuration:
