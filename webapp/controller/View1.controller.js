@@ -11,7 +11,8 @@ function (Controller, Fragment, JSONModel, MessageToast) {
         onInit: function () {
             var oModelJson = new JSONModel({
                 name: 'Adalto',
-                showSecondName: true
+                showSecondName: true,
+                id: ''
             })
             this.getView().setModel(oModelJson, "model1");
 
@@ -72,6 +73,12 @@ function (Controller, Fragment, JSONModel, MessageToast) {
         },
 
         onOpenDialog: function(){
+            var oRouter = this.getOwnerComponent().getRouter(),
+                    sId = this.getView().getModel("model1").getProperty("/id");
+                oRouter.navTo("Rota2", {id: sId});
+                return;
+
+
             var oView       = this.getView(),
                 oDialogKids = this.getView().byId("dialogKids");
             if(!oDialogKids){
